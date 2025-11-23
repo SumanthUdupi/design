@@ -1,6 +1,8 @@
 import Hero from '../components/Hero';
 import About from '../components/About';
 import ProjectsGrid from '../components/ProjectsGrid';
+import BackgroundDecorations from '../components/BackgroundDecorations';
+import HeroImage from '../components/HeroImage';
 
 export default function Home() {
   return (
@@ -10,15 +12,7 @@ export default function Home() {
           <Hero />
         </div>
         <div className="right" aria-hidden>
-          {/* Placeholder illustrated element */}
-          <div
-            style={{
-              width: '100%',
-              height: 300,
-              borderRadius: 24,
-              background: 'linear-gradient(135deg, rgba(198,123,92,0.12), rgba(139,157,131,0.08))',
-            }}
-          />
+          <HeroImage />
         </div>
       </section>
 
@@ -31,6 +25,8 @@ export default function Home() {
       <div className="container" style={{ paddingTop: 48, paddingBottom: 80 }}>
         <ProjectsGrid />
       </div>
+
+      <BackgroundDecorations />
     </>
   );
 }

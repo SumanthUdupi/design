@@ -1,5 +1,6 @@
 'use client';
 import { useTheme } from './ThemeProvider';
+import { motion, AnimatePresence } from 'framer-motion';
 
 export default function ThemeToggle() {
   const { theme, setTheme } = useTheme() || { theme: 'default', setTheme: () => {} };
@@ -13,13 +14,26 @@ export default function ThemeToggle() {
   };
 
   return (
-    <button
+    <motion.button
       className="theme-toggle"
       aria-label={`Current theme: ${theme}. Click to toggle.`}
       onClick={() => setTheme()}
       title="Toggle Theme"
+      whileHover={{ scale: 1.1, rotate: 15 }}
+      whileTap={{ scale: 0.9 }}
     >
-      <span className="icon">{getIcon()}</span>
+      <AnimatePresence mode="wait" initial={false}>
+        <motion.span
+          key={theme}
+          className="icon"
+          initial={{ y: -20, opacity: 0 }}
+          animate={{ y: 0, opacity: 1 }}
+          exit={{ y: 20, opacity: 0 }}
+          transition={{ duration: 0.2 }}
+        >
+          {getIcon()}
+        </motion.span>
+      </AnimatePresence>
       <style jsx>{`
         .theme-toggle {
           padding: 8px;
@@ -32,17 +46,14 @@ export default function ThemeToggle() {
           justify-content: center;
           width: 40px;
           height: 40px;
-          transition: all 0.3s ease;
-        }
-        .theme-toggle:hover {
-          background-color: var(--soft-clay);
-          transform: rotate(15deg);
+          overflow: hidden;
         }
         .icon {
           font-size: 18px;
           line-height: 1;
+          display: block;
         }
       `}</style>
-    </button>
+    </motion.button>
   );
 }
