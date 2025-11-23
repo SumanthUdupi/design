@@ -1,4 +1,4 @@
-import { Inter as GoogleInter, Fraunces as GoogleFraunces } from 'next/font/google';
+import { Inter as GoogleInter, Fraunces as GoogleFraunces, Caveat as GoogleCaveat } from 'next/font/google';
 
 const inter = GoogleInter({
   subsets: ['latin'],
@@ -14,5 +14,12 @@ const fraunces = GoogleFraunces({
   display: 'swap',
 });
 
-export { inter, fraunces };
-export default { inter, fraunces };
+const caveat = GoogleCaveat({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+  variable: '--font-caveat',
+  display: 'swap',
+});
+
+export { inter, fraunces, caveat };
+export default { inter, fraunces, caveat };
