@@ -1,16 +1,10 @@
 {
-  "extends": ["next/core-web-vitals", "eslint:recommended", "plugin:react/recommended"],
-  "env": {
-    "browser": true,
-    "es2021": true,
-    "jest": true
-  },
-  "parserOptions": {
-    "ecmaFeatures": { "jsx": true },
-    "ecmaVersion": 12,
-    "sourceType": "module"
-  },
+  "extends": "next/core-web-vitals",
   "rules": {
-    "react/react-in-jsx-scope": "off"
+    "react/no-unknown-property": "off",
+    "react/prop-types": "off",
+    "react/no-unescaped-entities": "off",
+    "no-empty": "off",
+    "no-unused-vars": "warn"
   }
 }

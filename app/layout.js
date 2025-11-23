@@ -3,7 +3,8 @@ import Header from '../components/Header';
 import Footer from '../components/Footer';
 import ThemeProvider from '../components/ThemeProvider';
 import AchievementProvider from '../components/AchievementProvider';
-import { inter, fraunces } from './fonts';
+import EasterEggs from '../components/EasterEggs';
+import { inter, fraunces, caveat } from './fonts';
 
 export const metadata = {
   title: 'Design Portfolio',
@@ -12,10 +13,11 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${inter.variable} ${fraunces.variable}`}>
+    <html lang="en" className={`${inter.variable} ${fraunces.variable} ${caveat.variable}`}>
       <body>
         <ThemeProvider>
           <AchievementProvider>
+            <EasterEggs />
             <Header />
             <main className="container">{children}</main>
             <Footer />
