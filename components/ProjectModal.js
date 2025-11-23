@@ -1,4 +1,6 @@
 'use client';
+import PropTypes from 'prop-types';
+import Image from 'next/image';
 import { useEffect, useRef } from 'react';
 
 export default function ProjectModal({ project, onClose }) {
@@ -50,7 +52,9 @@ export default function ProjectModal({ project, onClose }) {
       document.body.style.overflow = '';
       try {
         prev && prev.focus();
-      } catch (e) {}
+      } catch (e) {
+        // ignore if cannot focus previous element
+      }
     };
   }, [project, onClose]);
 
@@ -94,11 +98,13 @@ export default function ProjectModal({ project, onClose }) {
           ×
         </button>
         {/* Use next/image for optimized responsive hero image */}
-        <div style={{ marginBottom: 16, borderRadius: 8, overflow: 'hidden' }}>
-          <img
+        <div style={{ marginBottom: 16, borderRadius: 8, overflow: 'hidden', position: 'relative', width: '100%', minHeight: '200px' }}>
+           <Image
             src={project.hero.src}
             alt={project.hero.alt}
-            style={{ width: '100%', height: 'auto', display: 'block' }}
+            width={900}
+            height={500}
+            style={{ width: '100%', height: 'auto', objectFit: 'cover' }}
           />
         </div>
         <h2
@@ -121,3 +127,23 @@ export default function ProjectModal({ project, onClose }) {
     </div>
   );
 }
+
+ProjectModal.propTypes = {
+  project: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    title: PropTypes.string,
+    category: PropTypes.string,
+    year: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    details: PropTypes.shape({
+      overview: PropTypes.string,
+      challenge: PropTypes.string,
+      solution: PropTypes.string,
+      results: PropTypes.string,
+    }),
+    hero: PropTypes.shape({
+      src: PropTypes.string,
+      alt: PropTypes.string,
+    }),
+  }),
+  onClose: PropTypes.func,
+};

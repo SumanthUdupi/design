@@ -10,7 +10,7 @@ export default function About() {
           interactions, accessible patterns, and visual warmth.
         </p>
         <p>
-          I'm interested in projects that blend craft with user-centered outcomes — editorial
+          I&apos;m interested in projects that blend craft with user-centered outcomes — editorial
           interfaces, refined portfolios, and playful-but-purposeful easter eggs.
         </p>
       </div>

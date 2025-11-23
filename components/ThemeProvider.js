@@ -1,4 +1,5 @@
 'use client';
+import PropTypes from 'prop-types';
 import { createContext, useContext, useEffect, useState } from 'react';
 
 const ThemeContext = createContext(null);
@@ -29,7 +30,9 @@ export default function ThemeProvider({ children }) {
         }
       }
       localStorage.setItem('theme', theme);
-    } catch (e) {}
+    } catch (e) {
+        console.error('Failed to set theme', e);
+    }
   }, [theme]);
 
   const toggle = (next) => {
@@ -41,3 +44,7 @@ export default function ThemeProvider({ children }) {
     <ThemeContext.Provider value={{ theme, setTheme: toggle }}>{children}</ThemeContext.Provider>
   );
 }
+
+ThemeProvider.propTypes = {
+  children: PropTypes.node,
+};

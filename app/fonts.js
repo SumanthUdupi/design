@@ -14,5 +14,7 @@ const fraunces = GoogleFraunces({
   display: 'swap',
 });
 
+const fonts = { inter, fraunces };
+
 export { inter, fraunces };
-export default { inter, fraunces };
+export default fonts;

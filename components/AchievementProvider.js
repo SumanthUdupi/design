@@ -1,4 +1,5 @@
 'use client';
+import PropTypes from 'prop-types';
 import { createContext, useContext, useEffect, useState, useCallback } from 'react';
 import AchievementToast from './AchievementToast';
 
@@ -26,13 +27,17 @@ export default function AchievementProvider({ children }) {
     try {
       const raw = localStorage.getItem('portfolio-achievements');
       if (raw) setAchievements(JSON.parse(raw));
-    } catch (e) {}
+    } catch (e) {
+      console.error('Failed to parse achievements', e);
+    }
   }, []);
 
   useEffect(() => {
     try {
       localStorage.setItem('portfolio-achievements', JSON.stringify(achievements));
-    } catch (e) {}
+    } catch (e) {
+      console.error('Failed to save achievements', e);
+    }
   }, [achievements]);
 
   const unlock = useCallback((id) => {
@@ -59,3 +64,7 @@ export default function AchievementProvider({ children }) {
     </AchievementContext.Provider>
   );
 }
+
+AchievementProvider.propTypes = {
+  children: PropTypes.node,
+};

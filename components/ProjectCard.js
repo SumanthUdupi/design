@@ -1,4 +1,5 @@
 'use client';
+import PropTypes from 'prop-types';
 import Image from 'next/image';
 
 export default function ProjectCard({ project, onOpen }) {
@@ -48,3 +49,17 @@ export default function ProjectCard({ project, onOpen }) {
     </article>
   );
 }
+
+ProjectCard.propTypes = {
+  project: PropTypes.shape({
+    id: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+    title: PropTypes.string,
+    description: PropTypes.string,
+    tags: PropTypes.arrayOf(PropTypes.string),
+    thumbnail: PropTypes.shape({
+      src: PropTypes.string,
+      alt: PropTypes.string,
+    }),
+  }),
+  onOpen: PropTypes.func,
+};
