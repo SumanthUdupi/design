@@ -1,6 +1,7 @@
 # Phase 5: Testing, Launch & Post-Launch Requirements
 
 ## 📋 Phase Overview
+
 **Duration:** 2-3 weeks  
 **Priority:** Critical - Final quality assurance  
 **Goal:** Comprehensive testing, optimization, launch, and monitoring  
@@ -11,6 +12,7 @@
 ## 🎯 Objectives
 
 ### Primary Deliverables
+
 1. Comprehensive testing across all browsers and devices
 2. Performance optimization and final polish
 3. SEO and metadata implementation
@@ -28,6 +30,7 @@
 **Manual Testing Checklist:**
 
 **Navigation:**
+
 - [ ] All nav links work
 - [ ] Mobile menu opens/closes
 - [ ] Smooth scroll functions
@@ -37,6 +40,7 @@
 - [ ] Focus order logical
 
 **Hero Section:**
+
 - [ ] Text animates on load
 - [ ] CTA button scrolls to projects
 - [ ] Background loads properly
@@ -44,6 +48,7 @@
 - [ ] Logo click counter works
 
 **About Section:**
+
 - [ ] Text loads and displays
 - [ ] Photo/image loads correctly
 - [ ] Timeline interactive
@@ -52,6 +57,7 @@
 - [ ] Mobile layout adapts
 
 **Projects:**
+
 - [ ] All cards display
 - [ ] Hover states work
 - [ ] Click opens detail view
@@ -64,6 +70,7 @@
 - [ ] Back button works
 
 **Skills:**
+
 - [ ] Visualization loads
 - [ ] Interactive elements work
 - [ ] Click filters projects
@@ -71,6 +78,7 @@
 - [ ] Mobile version functional
 
 **Contact:**
+
 - [ ] Form fields work
 - [ ] Validation functions
 - [ ] Submit sends message
@@ -80,12 +88,14 @@
 - [ ] Hidden easter egg findable
 
 **Footer:**
+
 - [ ] All links work
 - [ ] Achievement counter accurate
 - [ ] Responsive layout
 - [ ] Copyright displays
 
 **Easter Eggs:**
+
 - [ ] Konami code works
 - [ ] Logo clicks tracked
 - [ ] Secret words detected
@@ -105,12 +115,14 @@
 - [ ] Seasonal theme applies
 
 **Mini-Games:**
+
 - [ ] Dot connection works
 - [ ] Memory pairs functional
 - [ ] Achievements unlock
 - [ ] Progress saves
 
 **Acceptance Criteria:**
+
 - [ ] 100% of checklist items pass
 - [ ] All interactions smooth
 - [ ] No broken features
@@ -121,24 +133,28 @@
 **Desktop Browsers:**
 
 **Chrome (Latest):**
+
 - [ ] Visual rendering correct
 - [ ] All features work
 - [ ] Performance good
 - [ ] DevTools: no errors
 
 **Firefox (Latest):**
+
 - [ ] Layout consistent
 - [ ] Animations smooth
 - [ ] Forms functional
 - [ ] Console: no errors
 
 **Safari (Latest):**
+
 - [ ] WebKit quirks handled
 - [ ] Fonts load properly
 - [ ] Transforms work
 - [ ] No visual glitches
 
 **Edge (Latest):**
+
 - [ ] Chromium-based: should match Chrome
 - [ ] Verify nonetheless
 - [ ] Test on Windows
@@ -146,29 +162,34 @@
 **Mobile Browsers:**
 
 **Safari iOS (14+):**
+
 - [ ] Touch interactions work
 - [ ] Viewport height handled
 - [ ] No 300ms delay
 - [ ] Smooth scrolling
 
 **Chrome Mobile (Android 10+):**
+
 - [ ] Touch targets adequate
 - [ ] Animations smooth
 - [ ] No lag
 - [ ] Forms work
 
 **Samsung Internet:**
+
 - [ ] Alternative android browser
 - [ ] Layout correct
 - [ ] Features functional
 
 **Testing Tools:**
+
 - BrowserStack or similar
 - Real devices where possible
 - Screenshots for comparison
 - Performance profiling
 
 **Acceptance Criteria:**
+
 - [ ] A-grade browsers: perfect
 - [ ] B-grade browsers: functional
 - [ ] Graceful degradation
@@ -177,6 +198,7 @@
 ### 1.3 Device Testing
 
 **Smartphones:**
+
 - [ ] iPhone SE (320px width)
 - [ ] iPhone 12/13 (390px)
 - [ ] iPhone Pro Max (428px)
@@ -184,17 +206,20 @@
 - [ ] Pixel 5 (393px)
 
 **Tablets:**
+
 - [ ] iPad Mini (768px)
 - [ ] iPad Pro (1024px)
 - [ ] Android tablet (various)
 
 **Desktops:**
+
 - [ ] 1366x768 (common laptop)
 - [ ] 1920x1080 (standard monitor)
 - [ ] 2560x1440 (high-res)
 - [ ] 3840x2160 (4K)
 
 **Testing Points:**
+
 - [ ] Layout adapts properly
 - [ ] Text remains readable
 - [ ] Touch targets adequate (mobile)
@@ -203,12 +228,14 @@
 - [ ] Performance acceptable
 
 **Orientation:**
+
 - [ ] Portrait mode works
 - [ ] Landscape mode works
 - [ ] Rotation smooth
 - [ ] No content cutoff
 
 **Acceptance Criteria:**
+
 - [ ] All devices render correctly
 - [ ] No showstopper bugs
 - [ ] Comfortable experience
@@ -219,18 +246,21 @@
 **Automated Testing:**
 
 **Lighthouse:**
+
 - [ ] Accessibility score 95+
 - [ ] All audits passed
 - [ ] Best practices followed
 - [ ] PWA considerations
 
 **WAVE Extension:**
+
 - [ ] No errors
 - [ ] Contrast checked
 - [ ] Structure validated
 - [ ] ARIA correct
 
 **axe DevTools:**
+
 - [ ] No violations
 - [ ] Best practices
 - [ ] WCAG 2.1 AA compliance
@@ -238,6 +268,7 @@
 **Manual Testing:**
 
 **Screen Reader:**
+
 - [ ] VoiceOver (Mac/iOS)
 - [ ] NVDA (Windows)
 - [ ] All content announced
@@ -247,6 +278,7 @@
 - [ ] Status updates announced
 
 **Keyboard Navigation:**
+
 - [ ] Tab through all elements
 - [ ] Focus visible always
 - [ ] Skip to content link
@@ -256,18 +288,21 @@
 - [ ] No keyboard traps
 
 **Color Contrast:**
+
 - [ ] All text meets 4.5:1 (AA)
 - [ ] Important text meets 7:1 (AAA)
 - [ ] Interactive elements clear
 - [ ] Error states not color-only
 
 **Reduced Motion:**
+
 - [ ] Preference respected
 - [ ] Animations disabled/simplified
 - [ ] Functionality intact
 - [ ] Transitions minimal
 
 **Acceptance Criteria:**
+
 - [ ] WCAG 2.1 AA compliant
 - [ ] Screen reader friendly
 - [ ] Keyboard accessible
@@ -279,6 +314,7 @@
 **Tools:**
 
 **Lighthouse:**
+
 - [ ] Performance score 90+
 - [ ] FCP < 1.5s
 - [ ] LCP < 2.5s
@@ -287,18 +323,21 @@
 - [ ] SI < 3.5s
 
 **WebPageTest:**
+
 - [ ] Multiple locations tested
 - [ ] Various connection speeds
 - [ ] Filmstrip analysis
 - [ ] Waterfall chart reviewed
 
 **Chrome DevTools:**
+
 - [ ] Performance profiling
 - [ ] Memory leaks checked
 - [ ] Network tab optimized
 - [ ] Coverage analysis
 
 **Performance Budget:**
+
 - [ ] HTML: < 30KB
 - [ ] CSS: < 80KB
 - [ ] JS: < 150KB (initial)
@@ -306,6 +345,7 @@
 - [ ] Fonts: < 100KB
 
 **Optimization Checklist:**
+
 - [ ] Code splitting implemented
 - [ ] Lazy loading active
 - [ ] Images optimized
@@ -317,6 +357,7 @@
 - [ ] CDN usage (if applicable)
 
 **Acceptance Criteria:**
+
 - [ ] All targets met
 - [ ] No performance regressions
 - [ ] Fast on 3G
@@ -325,6 +366,7 @@
 ### 1.6 User Testing
 
 **Test Group:**
+
 - 5-10 users
 - Mix of technical/non-technical
 - Various devices
@@ -333,6 +375,7 @@
 **Testing Protocol:**
 
 **Tasks:**
+
 1. First impressions (10 seconds)
 2. Find and view a project
 3. Learn about you (about section)
@@ -341,6 +384,7 @@
 6. Find at least one easter egg
 
 **Questions:**
+
 - What do you think this site is about?
 - How easy was it to navigate?
 - Did anything confuse you?
@@ -351,6 +395,7 @@
 - Mobile experience acceptable?
 
 **Observation:**
+
 - Where do they pause?
 - What do they click?
 - Any confusion?
@@ -358,12 +403,14 @@
 - Frustration points?
 
 **Documentation:**
+
 - Record sessions (with permission)
 - Take notes
 - Collect feedback
 - Prioritize issues
 
 **Acceptance Criteria:**
+
 - [ ] 5+ users tested
 - [ ] Feedback documented
 - [ ] Critical issues fixed
@@ -376,39 +423,15 @@
 ### 2.1 Meta Tags
 
 **Essential Tags:**
-```html
 
+```html
 Your Name - Portfolio | Creative Developer & Designer
 
-
-
 <!-- Open Graph / Facebook -->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ```
 
 **Social Share Images:**
+
 - Size: 1200x630px (OG), 1200x600px (Twitter)
 - Format: JPG or PNG
 - File size: < 1MB
@@ -416,6 +439,7 @@ Your Name - Portfolio | Creative Developer & Designer
 - Text readable at small sizes
 
 **Acceptance Criteria:**
+
 - [ ] All meta tags present
 - [ ] Share images created
 - [ ] Descriptions compelling
@@ -425,6 +449,7 @@ Your Name - Portfolio | Creative Developer & Designer
 ### 2.2 Structured Data
 
 **Schema.org Markup:**
+
 ```json
 {
   "@context": "https://schema.org",
@@ -446,6 +471,7 @@ Your Name - Portfolio | Creative Developer & Designer
 ```
 
 **Portfolio Projects:**
+
 ```json
 {
   "@context": "https://schema.org",
@@ -461,6 +487,7 @@ Your Name - Portfolio | Creative Developer & Designer
 ```
 
 **Acceptance Criteria:**
+
 - [ ] Schema markup added
 - [ ] Validated with Google tool
 - [ ] Rich results eligible
@@ -469,29 +496,31 @@ Your Name - Portfolio | Creative Developer & Designer
 ### 2.3 Sitemap & Robots.txt
 
 **Sitemap.xml:**
+
 ```xml
 
 
-  
+
     https://yoursite.com/
     2024-11-22
     1.0
-  
-  
+
+
     https://yoursite.com/#about
     2024-11-22
     0.8
-  
-  
+
+
     https://yoursite.com/#projects
     2024-11-22
     0.9
-  
-  
+
+
 
 ```
 
 **Robots.txt:**
+
 ```
 User-agent: *
 Allow: /
@@ -499,12 +528,14 @@ Sitemap: https://yoursite.com/sitemap.xml
 ```
 
 **Submission:**
+
 - [ ] Google Search Console
 - [ ] Bing Webmaster Tools
 - [ ] Submit sitemap
 - [ ] Verify ownership
 
 **Acceptance Criteria:**
+
 - [ ] Sitemap generated
 - [ ] Robots.txt configured
 - [ ] Submitted to search engines
@@ -513,29 +544,34 @@ Sitemap: https://yoursite.com/sitemap.xml
 ### 2.4 Performance & Technical SEO
 
 **Core Web Vitals:**
+
 - [ ] LCP optimized
 - [ ] FID minimized
 - [ ] CLS stable
 
 **Mobile-Friendly:**
+
 - [ ] Responsive design
 - [ ] Touch targets adequate
 - [ ] No mobile-specific issues
 - [ ] Mobile usability verified
 
 **HTTPS:**
+
 - [ ] SSL certificate installed
 - [ ] All resources HTTPS
 - [ ] Mixed content resolved
 - [ ] Certificate valid
 
 **Page Speed:**
+
 - [ ] Fast loading times
 - [ ] Optimized images
 - [ ] Minified code
 - [ ] Cached assets
 
 **Acceptance Criteria:**
+
 - [ ] Mobile-friendly test passed
 - [ ] HTTPS everywhere
 - [ ] PageSpeed Insights green
@@ -548,44 +584,42 @@ Sitemap: https://yoursite.com/sitemap.xml
 ### 3.1 Analytics Setup
 
 **Google Analytics 4:**
+
 ```html
-
-
-
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-  gtag('config', 'G-XXXXXXXXXX');
-
+window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js',
+new Date()); gtag('config', 'G-XXXXXXXXXX');
 ```
 
 **Custom Events:**
+
 ```javascript
 // Easter egg discovered
 gtag('event', 'easter_egg_found', {
-  'egg_name': 'konami_code',
-  'value': 1
+  egg_name: 'konami_code',
+  value: 1,
 });
 
 // Project viewed
 gtag('event', 'project_view', {
-  'project_id': 'project-1',
-  'project_name': 'Project Name'
+  project_id: 'project-1',
+  project_name: 'Project Name',
 });
 
 // Contact form submitted
 gtag('event', 'contact_submit', {
-  'form_type': 'contact',
-  'success': true
+  form_type: 'contact',
+  success: true,
 });
 ```
 
 **Privacy-Friendly Alternative:**
+
 - Plausible Analytics
 - Simple Analytics
 - Self-hosted Matomo
 
 **Acceptance Criteria:**
+
 - [ ] Analytics installed
 - [ ] Custom events tracking
 - [ ] Privacy policy added
@@ -594,16 +628,18 @@ gtag('event', 'contact_submit', {
 ### 3.2 Error Monitoring
 
 **Sentry Setup:**
+
 ```javascript
 Sentry.init({
-  dsn: "YOUR_SENTRY_DSN",
+  dsn: 'YOUR_SENTRY_DSN',
   integrations: [new BrowserTracing()],
   tracesSampleRate: 0.1,
-  environment: "production"
+  environment: 'production',
 });
 ```
 
 **What to Track:**
+
 - JavaScript errors
 - Unhandled promise rejections
 - Failed network requests
@@ -611,6 +647,7 @@ Sentry.init({
 - Form submission errors
 
 **Acceptance Criteria:**
+
 - [ ] Error tracking active
 - [ ] Alerts configured
 - [ ] Team notified of issues
@@ -619,24 +656,28 @@ Sentry.init({
 ### 3.3 Performance Monitoring
 
 **Real User Monitoring:**
+
 - [ ] Core Web Vitals tracking
 - [ ] Page load metrics
 - [ ] Resource timing
 - [ ] User interactions
 
 **Synthetic Monitoring:**
+
 - [ ] Uptime monitoring
 - [ ] Performance checks
 - [ ] Hourly or daily tests
 - [ ] Multiple locations
 
 **Tools:**
+
 - Google Analytics (RUM)
 - Lighthouse CI
 - SpeedCurve
 - Pingdom
 
 **Acceptance Criteria:**
+
 - [ ] Monitoring active
 - [ ] Baseline established
 - [ ] Alerts configured
@@ -649,12 +690,14 @@ Sentry.init({
 ### 4.1 Hosting Setup
 
 **Recommended Hosts:**
+
 - Netlify (easiest, great DX)
 - Vercel (excellent performance)
 - GitHub Pages (free, simple)
 - AWS S3 + CloudFront (scalable)
 
 **Configuration:**
+
 ```toml
 # netlify.toml
 [build]
@@ -675,12 +718,14 @@ Sentry.init({
 ```
 
 **Custom Domain:**
+
 - [ ] Domain purchased
 - [ ] DNS configured
 - [ ] SSL enabled
 - [ ] WWW redirect setup
 
 **Acceptance Criteria:**
+
 - [ ] Site deployed
 - [ ] HTTPS working
 - [ ] Domain connected
@@ -689,6 +734,7 @@ Sentry.init({
 ### 4.2 Pre-Launch Checklist
 
 **Content:**
+
 - [ ] All copy proofread
 - [ ] Images optimized
 - [ ] Links verified
@@ -696,6 +742,7 @@ Sentry.init({
 - [ ] 404 page styled
 
 **Technical:**
+
 - [ ] All bugs fixed
 - [ ] Performance optimized
 - [ ] Analytics installed
@@ -705,18 +752,21 @@ Sentry.init({
 - [ ] Meta tags complete
 
 **Legal:**
+
 - [ ] Privacy policy (if collecting data)
 - [ ] Cookie consent (if EU)
 - [ ] Terms of use (optional)
 - [ ] Copyright notice
 
 **Backup:**
+
 - [ ] Code in version control
 - [ ] Database backup (if any)
 - [ ] Asset backup
 - [ ] Deployment rollback plan
 
 **Acceptance Criteria:**
+
 - [ ] All items checked
 - [ ] Team sign-off
 - [ ] Ready to launch
@@ -724,6 +774,7 @@ Sentry.init({
 ### 4.3 Launch Day
 
 **Launch Process:**
+
 1. Final smoke test
 2. Deploy to production
 3. Verify deployment
@@ -733,6 +784,7 @@ Sentry.init({
 7. Announce launch
 
 **Announcement Channels:**
+
 - LinkedIn post
 - Twitter/X thread
 - Portfolio update email
@@ -740,12 +792,14 @@ Sentry.init({
 - Friends and family
 
 **Monitoring:**
+
 - [ ] Watch error logs (first hour)
 - [ ] Check analytics (first day)
 - [ ] Monitor performance
 - [ ] Respond to feedback
 
 **Acceptance Criteria:**
+
 - [ ] Smooth launch
 - [ ] No critical issues
 - [ ] Initial traffic received
@@ -758,6 +812,7 @@ Sentry.init({
 ### 5.1 First Week Monitoring
 
 **Daily Checks:**
+
 - [ ] Error logs review
 - [ ] Analytics review
 - [ ] Performance metrics
@@ -765,6 +820,7 @@ Sentry.init({
 - [ ] Contact form submissions
 
 **Metrics to Track:**
+
 - Unique visitors
 - Page views
 - Bounce rate
@@ -775,12 +831,14 @@ Sentry.init({
 - Social shares
 
 **Issue Response:**
+
 - Critical bugs: fix immediately
 - Minor bugs: log and prioritize
 - User feedback: respond within 24h
 - Performance issues: investigate
 
 **Acceptance Criteria:**
+
 - [ ] Daily monitoring completed
 - [ ] Issues addressed promptly
 - [ ] Metrics trending positively
@@ -789,6 +847,7 @@ Sentry.init({
 ### 5.2 Iteration & Improvement
 
 **Feedback Collection:**
+
 - Direct messages
 - Contact form responses
 - Social media comments
@@ -796,6 +855,7 @@ Sentry.init({
 - Heatmap data (optional)
 
 **Potential Improvements:**
+
 ```
 Week 1-2:
 - Bug fixes
@@ -817,12 +877,14 @@ Ongoing:
 ```
 
 **A/B Testing (Optional):**
+
 - CTA button copy
 - Project card layouts
 - About section structure
 - Contact form fields
 
 **Acceptance Criteria:**
+
 - [ ] Feedback reviewed weekly
 - [ ] Improvements prioritized
 - [ ] Updates deployed regularly
@@ -831,6 +893,7 @@ Ongoing:
 ### 5.3 Content Updates
 
 **Regular Updates:**
+
 - [ ] New projects (quarterly)
 - [ ] Blog posts (if applicable)
 - [ ] Achievement additions
@@ -839,6 +902,7 @@ Ongoing:
 - [ ] About section refreshes
 
 **Update Process:**
+
 1. Create content
 2. Optimize assets
 3. Test locally
@@ -849,6 +913,7 @@ Ongoing:
 8. Announce update
 
 **Acceptance Criteria:**
+
 - [ ] Update process documented
 - [ ] Easy to add content
 - [ ] No deployment issues
@@ -857,6 +922,7 @@ Ongoing:
 ### 5.4 Community Building
 
 **Engagement:**
+
 - Respond to contact forms
 - Reply to social mentions
 - Share behind-the-scenes
@@ -864,18 +930,21 @@ Ongoing:
 - Thank feedback providers
 
 **Easter Egg Leaderboard (Optional):**
+
 - Track top discoverers
 - Feature on site
 - Special rewards
 - Community recognition
 
 **Newsletter (Optional):**
+
 - Monthly updates
 - New projects
 - Easter egg hints
 - Creative insights
 
 **Acceptance Criteria:**
+
 - [ ] Active engagement
 - [ ] Community growing
 - [ ] Positive sentiment
@@ -888,34 +957,41 @@ Ongoing:
 ### 6.1 Technical Documentation
 
 **README.md:**
+
 ```markdown
 # Portfolio Website
 
 Sophisticated portfolio with hidden Easter eggs.
 
 ## Setup
+
 npm install
 npm run dev
 
 ## Build
+
 npm run build
 
 ## Deploy
+
 npm run deploy
 
 ## Tech Stack
+
 - React
 - CSS Modules
 - Vite
 
 ## Project Structure
+
 /src
-  /components
-  /pages
-  /utils
-  /assets
+/components
+/pages
+/utils
+/assets
 
 ## Key Features
+
 - Easter egg system
 - Achievement tracking
 - Interactive skills
@@ -923,12 +999,14 @@ npm run deploy
 ```
 
 **Component Documentation:**
+
 - Purpose of each component
 - Props and usage
 - Examples
 - Customization options
 
 **Acceptance Criteria:**
+
 - [ ] README complete
 - [ ] Setup instructions clear
 - [ ] Code commented
@@ -937,6 +1015,7 @@ npm run deploy
 ### 6.2 Content Management Guide
 
 **Adding Projects:**
+
 1. Prepare content and images
 2. Edit projects data file
 3. Add images to assets
@@ -944,18 +1023,21 @@ npm run deploy
 5. Deploy
 
 **Updating Copy:**
+
 - Location of content files
 - Editing guidelines
 - Proofread checklist
 - Deployment process
 
 **Managing Easter Eggs:**
+
 - How to add new eggs
 - Testing procedures
 - Achievement integration
 - Balance considerations
 
 **Acceptance Criteria:**
+
 - [ ] Guide complete
 - [ ] Non-technical friendly
 - [ ] Screenshots included
@@ -964,28 +1046,33 @@ npm run deploy
 ### 6.3 Maintenance Schedule
 
 **Daily:**
+
 - Check error logs
 - Review contact forms
 - Monitor uptime
 
 **Weekly:**
+
 - Analytics review
 - Performance check
 - Backup verification
 
 **Monthly:**
+
 - Content review
 - Link checking
 - Security updates
 - Dependency updates
 
 **Quarterly:**
+
 - Comprehensive audit
 - Feature assessment
 - User testing
 - Major updates
 
 **Acceptance Criteria:**
+
 - [ ] Schedule documented
 - [ ] Reminders set
 - [ ] Responsibilities assigned
@@ -996,6 +1083,7 @@ npm run deploy
 ## 🎯 Phase 5 Success Criteria
 
 **Testing Complete:**
+
 - [ ] All functional tests passed
 - [ ] Cross-browser verified
 - [ ] Device testing complete
@@ -1004,6 +1092,7 @@ npm run deploy
 - [ ] User testing positive
 
 **Launch Ready:**
+
 - [ ] SEO optimized
 - [ ] Analytics installed
 - [ ] Monitoring active
@@ -1011,6 +1100,7 @@ npm run deploy
 - [ ] Pre-launch checklist complete
 
 **Live & Monitored:**
+
 - [ ] Successfully deployed
 - [ ] Domain working
 - [ ] HTTPS active
@@ -1018,6 +1108,7 @@ npm run deploy
 - [ ] Positive reception
 
 **Post-Launch:**
+
 - [ ] First week monitored
 - [ ] Feedback collected
 - [ ] Improvements planned
@@ -1030,6 +1121,7 @@ npm run deploy
 ### You Did It!
 
 This portfolio represents:
+
 - Weeks of thoughtful work
 - Attention to detail
 - Craft and care
@@ -1038,6 +1130,7 @@ This portfolio represents:
 - Professional excellence
 
 **Share Your Success:**
+
 - Show your work
 - Tell your story
 - Celebrate achievements
@@ -1045,6 +1138,7 @@ This portfolio represents:
 - Inspire others
 
 **Keep Evolving:**
+
 - This is v1.0, not the end
 - Listen to feedback
 - Iterate continuously

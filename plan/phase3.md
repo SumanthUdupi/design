@@ -1,6 +1,7 @@
 # Phase 3: Projects Showcase & Advanced Easter Eggs Requirements
 
 ## 📋 Phase Overview
+
 **Duration:** 3-4 weeks  
 **Priority:** Critical - Core portfolio content  
 **Goal:** Create sophisticated project showcase with hidden discoveries  
@@ -11,6 +12,7 @@
 ## 🎯 Objectives
 
 ### Primary Deliverables
+
 1. Project card grid with thoughtful layout
 2. Project detail modal/page system
 3. Filtering and categorization
@@ -26,6 +28,7 @@
 ### 1.1 Project Card Design
 
 **Visual Structure:**
+
 ```
 ┌──────────────────────────────┐
 │                              │
@@ -44,6 +47,7 @@
 ```
 
 **Specifications:**
+
 - Card width: 350-400px (flexible)
 - Image aspect ratio: 16:9 or 3:2
 - Padding: 24px inside card
@@ -54,11 +58,13 @@
 **Card States:**
 
 **Default:**
+
 - Soft shadow
 - No transform
 - Border: none
 
 **Hover:**
+
 - Transform: translateY(-8px)
 - Shadow: 0 12px 32px rgba(107, 93, 79, 0.15)
 - Image: scale(1.02)
@@ -66,11 +72,13 @@
 - Transition: 0.4s ease-out
 
 **Focus (keyboard):**
+
 - Outline: 2px solid var(--warm-brown)
 - Outline-offset: 4px
 - Same transform as hover
 
 **Acceptance Criteria:**
+
 - [ ] Card proportions golden ratio where possible
 - [ ] Hover animation smooth at 60fps
 - [ ] Image never pixelates
@@ -82,6 +90,7 @@
 **Layout Options:**
 
 **Option A: Masonry Grid**
+
 ```css
 .projects-grid {
   display: grid;
@@ -90,11 +99,13 @@
   grid-auto-flow: dense;
 }
 ```
+
 - Cards have varying heights
 - Organic, editorial feel
 - No forced uniformity
 
 **Option B: Offset Grid**
+
 ```
 ┌─────┐     ┌─────┐     ┌─────┐
 │  1  │     │  2  │     │  3  │
@@ -103,16 +114,19 @@
      │  4  │     │  5  │
      └─────┘     └─────┘
 ```
+
 - Alternating vertical alignment
 - Creates visual rhythm
 - Still responsive
 
 **Selection Criteria:**
+
 - Masonry if projects have varied content length
 - Offset if you want more control
 - Both must work on mobile (single column)
 
 **Responsive Behavior:**
+
 ```
 Mobile (< 768px):
 - 1 column, full width
@@ -129,6 +143,7 @@ Desktop (1024px+):
 ```
 
 **Acceptance Criteria:**
+
 - [ ] Layout adapts smoothly
 - [ ] No awkward gaps
 - [ ] Visual balance maintained
@@ -137,6 +152,7 @@ Desktop (1024px+):
 ### 1.3 Project Data Structure
 
 **Data Model:**
+
 ```javascript
 const projects = [
   {
@@ -149,43 +165,45 @@ const projects = [
     featured: true,
     thumbnail: {
       src: '/images/project-thumb.webp',
-      alt: 'Descriptive alt text'
+      alt: 'Descriptive alt text',
     },
     hero: {
       src: '/images/project-hero.webp',
-      alt: 'Project hero image'
+      alt: 'Project hero image',
     },
     gallery: [
       { src: '/images/1.webp', alt: 'Screen 1', caption: 'Optional' },
-      { src: '/images/2.webp', alt: 'Screen 2', caption: 'Optional' }
+      { src: '/images/2.webp', alt: 'Screen 2', caption: 'Optional' },
     ],
     details: {
       overview: 'Full project description...',
       challenge: 'What problem did this solve?',
       solution: 'How did you approach it?',
       results: 'What was the outcome?',
-      learned: 'Personal reflection on what you learned'
+      learned: 'Personal reflection on what you learned',
     },
     behindTheScenes: {
       sketches: ['/images/sketch1.jpg', '/images/sketch2.jpg'],
       process: 'Story of how you created this...',
-      challenges: 'Obstacles you faced...'
+      challenges: 'Obstacles you faced...',
     },
     link: {
       url: 'https://project-url.com',
-      label: 'View Live Site'
-    }
-  }
+      label: 'View Live Site',
+    },
+  },
 ];
 ```
 
 **Requirements:**
+
 - Minimum 6 projects for launch
 - All images optimized (< 200KB each)
 - Alt text for accessibility
 - Behind-the-scenes content for featured projects
 
 **Acceptance Criteria:**
+
 - [ ] Data structure supports all features
 - [ ] Easy to add new projects
 - [ ] Images properly attributed
@@ -194,6 +212,7 @@ const projects = [
 ### 1.4 Tag System
 
 **Tag Design:**
+
 - Pill-shaped chips
 - Background: var(--soft-clay)
 - Text: var(--warm-brown)
@@ -202,21 +221,24 @@ const projects = [
 - Font-size: 14px
 
 **Tag Categories:**
+
 ```javascript
 const tagCategories = {
   skills: ['React', 'CSS', 'JavaScript', 'Figma'],
   types: ['Web Design', 'Branding', 'UI/UX', 'Frontend'],
-  industries: ['E-commerce', 'Education', 'Healthcare']
+  industries: ['E-commerce', 'Education', 'Healthcare'],
 };
 ```
 
 **Tag Interactions:**
+
 - Hover: Slightly darker background
 - Click: Filter projects by that tag
 - Multi-select capability
 - Clear filters button
 
 **Acceptance Criteria:**
+
 - [ ] Tags consistently styled
 - [ ] Filtering works smoothly
 - [ ] Mobile-friendly size
@@ -231,33 +253,27 @@ const tagCategories = {
 **Recommendation: Full-Screen Modal**
 
 **Rationale:**
+
 - Keeps user in flow
 - Easier navigation between projects
 - Preserves scroll position
 - More modern feel
 
 **Alternative: Dedicated Pages**
+
 - Better for SEO
 - Shareable URLs
 - Deeper content
 - Use if projects are extensive
 
 **Implementation:**
+
 ```html
-
-
-  ×
-  
-    
-  
-  
-    ← Previous
-    Next →
-  
-
+× ← Previous Next →
 ```
 
 **Acceptance Criteria:**
+
 - [ ] Opens smoothly (0.3s fade + scale)
 - [ ] Background blurs or darkens
 - [ ] Escape key closes
@@ -268,6 +284,7 @@ const tagCategories = {
 ### 2.2 Detail View Layout
 
 **Content Structure:**
+
 ```
 ┌────────────────────────────────────┐
 │  [X Close]                         │
@@ -308,6 +325,7 @@ const tagCategories = {
 ```
 
 **Typography:**
+
 - Title: 40-48px serif
 - Section headings: 28-32px serif
 - Body: 18px sans-serif
@@ -315,11 +333,13 @@ const tagCategories = {
 - Max-width: 680px for text
 
 **Spacing:**
+
 - Vertical rhythm: 48px between sections
 - Image margins: 64px top/bottom
 - Side padding: 8% of viewport
 
 **Acceptance Criteria:**
+
 - [ ] Comfortable reading experience
 - [ ] Clear hierarchy
 - [ ] Images load progressively
@@ -328,41 +348,45 @@ const tagCategories = {
 ### 2.3 Image Gallery
 
 **Gallery Design:**
+
 - Carousel or grid layout
 - Click to enlarge
 - Keyboard navigation (arrow keys)
 - Captions for context
 
 **Carousel Implementation:**
+
 ```javascript
 // Simple carousel
 const carousel = {
   currentIndex: 0,
   images: project.gallery,
-  
+
   next() {
     this.currentIndex = (this.currentIndex + 1) % this.images.length;
     this.render();
   },
-  
+
   prev() {
     this.currentIndex = (this.currentIndex - 1 + this.images.length) % this.images.length;
     this.render();
   },
-  
+
   render() {
     // Update DOM with current image
-  }
+  },
 };
 ```
 
 **Enlarged View:**
+
 - Fullscreen overlay
 - Close on click outside
 - Smooth zoom transition
 - Escape key closes
 
 **Acceptance Criteria:**
+
 - [ ] Smooth transitions
 - [ ] Touch swipe on mobile
 - [ ] Keyboard accessible
@@ -371,6 +395,7 @@ const carousel = {
 ### 2.4 Behind-the-Scenes Section
 
 **Content Types:**
+
 - Process sketches
 - Wireframes
 - Rejected concepts
@@ -378,18 +403,21 @@ const carousel = {
 - Technical challenges
 
 **Design:**
+
 - Collapsible section or separate tab
 - Hand-drawn header illustration
 - Casual, personal tone
 - Image grid for sketches
 
 **Unlock Mechanism:**
+
 - Hidden by default
 - Type "story" anywhere to reveal
 - Or click hidden element
 - Achievement: "Story Seeker"
 
 **Acceptance Criteria:**
+
 - [ ] Content adds value
 - [ ] Not just filler
 - [ ] Images clear even if sketches
@@ -398,25 +426,24 @@ const carousel = {
 ### 2.5 Project Navigation
 
 **Between Projects:**
+
 - Previous/Next buttons
 - Hand-drawn arrows
 - Keyboard shortcuts (← →)
 - Wrap around (last → first)
 
 **Back to Grid:**
+
 - Close modal button
 - Escape key
 - Logo click
 - Restores scroll position
 
 **URL Handling:**
+
 ```javascript
 // Update URL without reload
-window.history.pushState(
-  { projectId: project.id },
-  project.title,
-  `/#projects/${project.id}`
-);
+window.history.pushState({ projectId: project.id }, project.title, `/#projects/${project.id}`);
 
 // Handle back button
 window.addEventListener('popstate', (e) => {
@@ -429,6 +456,7 @@ window.addEventListener('popstate', (e) => {
 ```
 
 **Acceptance Criteria:**
+
 - [ ] URL updates on open
 - [ ] Browser back works
 - [ ] Deep linking works
@@ -443,6 +471,7 @@ window.addEventListener('popstate', (e) => {
 **Trigger:** ↑ ↑ ↓ ↓ ← → ← → B A
 
 **Effect Sequence:**
+
 1. Warm gradient wash (0.3s)
 2. Transition to "Canvas Mode"
 3. Hidden sketchbook section reveals
@@ -450,22 +479,34 @@ window.addEventListener('popstate', (e) => {
 5. Achievement: "Secret Keeper"
 
 **Canvas Mode:**
+
 - Background becomes textured paper
 - Slight sepia tone overlay
 - Sketched borders appear
 - Handwritten notes visible
 
 **Sketchbook Content:**
+
 - Early project concepts
 - Doodles and explorations
 - Creative process insights
 - Personal reflections
 
 **Implementation:**
+
 ```javascript
-const konamiCode = ['ArrowUp', 'ArrowUp', 'ArrowDown', 'ArrowDown', 
-                    'ArrowLeft', 'ArrowRight', 'ArrowLeft', 'ArrowRight',
-                    'b', 'a'];
+const konamiCode = [
+  'ArrowUp',
+  'ArrowUp',
+  'ArrowDown',
+  'ArrowDown',
+  'ArrowLeft',
+  'ArrowRight',
+  'ArrowLeft',
+  'ArrowRight',
+  'b',
+  'a',
+];
 let konamiIndex = 0;
 
 document.addEventListener('keydown', (e) => {
@@ -482,6 +523,7 @@ document.addEventListener('keydown', (e) => {
 ```
 
 **Acceptance Criteria:**
+
 - [ ] Code detection reliable
 - [ ] Transition smooth (1.2s)
 - [ ] Sketchbook content ready
@@ -491,12 +533,14 @@ document.addEventListener('keydown', (e) => {
 ### 3.2 Secret Word Detection
 
 **Words to Detect:**
+
 - "create" → Drawing mode
 - "story" → Hidden narratives
 - "journey" → Timeline animation
 - "wonder" → Sparkle effects
 
 **Implementation:**
+
 ```javascript
 let typedText = '';
 const secretWords = ['create', 'story', 'journey', 'wonder'];
@@ -504,8 +548,8 @@ const secretWords = ['create', 'story', 'journey', 'wonder'];
 document.addEventListener('keypress', (e) => {
   typedText += e.key;
   typedText = typedText.slice(-10); // Keep last 10 chars
-  
-  secretWords.forEach(word => {
+
+  secretWords.forEach((word) => {
     if (typedText.includes(word)) {
       triggerSecretWord(word);
       typedText = '';
@@ -515,6 +559,7 @@ document.addEventListener('keypress', (e) => {
 ```
 
 **"create" Effect:**
+
 - Cursor becomes pencil icon
 - Light sketch trail follows mouse
 - Lasts 30 seconds
@@ -522,6 +567,7 @@ document.addEventListener('keypress', (e) => {
 - Achievement: "Artist's Touch"
 
 **"story" Effect:**
+
 - Behind-the-scenes notes appear
 - Handwritten style
 - Slide in from margins
@@ -529,6 +575,7 @@ document.addEventListener('keypress', (e) => {
 - Achievement: "Story Seeker"
 
 **"journey" Effect:**
+
 - Animated path draws across page
 - Shows creative evolution
 - Illustrated waypoints
@@ -536,6 +583,7 @@ document.addEventListener('keypress', (e) => {
 - Achievement: "Pathfinder"
 
 **"wonder" Effect:**
+
 - Warm gold sparkles
 - Elements gently float
 - Ambient glow
@@ -543,6 +591,7 @@ document.addEventListener('keypress', (e) => {
 - Achievement: "Wonderer"
 
 **Acceptance Criteria:**
+
 - [ ] Word detection accurate
 - [ ] Each effect unique and meaningful
 - [ ] Can be triggered multiple times
@@ -552,16 +601,19 @@ document.addEventListener('keypress', (e) => {
 ### 3.3 Color Harmony Challenge
 
 **Setup:**
+
 - 5 hidden color swatches
 - Scattered throughout page
 - Match your palette colors
 
 **Challenge:**
+
 - Find all 5 swatches
 - Click in order (cool to warm)
 - Or create gradient by clicking adjacent
 
 **Swatches:**
+
 1. Sage Green (hidden in hero)
 2. Terracotta (in project card)
 3. Cream (in footer)
@@ -569,6 +621,7 @@ document.addEventListener('keypress', (e) => {
 5. Gold (in achievement notification)
 
 **Success Reward:**
+
 - Custom theme builder unlocks
 - Adjust palette colors
 - Save variations
@@ -576,6 +629,7 @@ document.addEventListener('keypress', (e) => {
 - Achievement: "Color Composer"
 
 **Theme Builder UI:**
+
 ```
 ┌──────────────────────────────┐
 │  Create Your Palette         │
@@ -593,6 +647,7 @@ document.addEventListener('keypress', (e) => {
 ```
 
 **Acceptance Criteria:**
+
 - [ ] Swatches subtle but findable
 - [ ] Challenge logic clear
 - [ ] Theme builder functional
@@ -604,12 +659,14 @@ document.addEventListener('keypress', (e) => {
 **Trigger:** Hold Shift + move mouse slowly
 
 **Effect:**
+
 - Warm spotlight follows cursor
 - Reveals hidden details
 - Soft glow on interactive elements
 - Illustrated elements highlight
 
 **Implementation:**
+
 ```javascript
 let shiftHeld = false;
 let spotlight;
@@ -636,6 +693,7 @@ document.addEventListener('mousemove', (e) => {
 ```
 
 **Spotlight Design:**
+
 - Radial gradient
 - Warm golden center
 - Soft falloff
@@ -643,15 +701,18 @@ document.addEventListener('mousemove', (e) => {
 - Mix-blend-mode: overlay
 
 **Hidden Details Revealed:**
+
 - Margin illustrations
 - Secret messages
 - Easter egg hints
 - Process sketches
 
 **Achievement:**
+
 - "Light Bearer" (after 30s exploration)
 
 **Acceptance Criteria:**
+
 - [ ] Smooth movement (60fps)
 - [ ] Details tastefully hidden
 - [ ] Mobile: double-tap Shift alternative
@@ -660,26 +721,29 @@ document.addEventListener('mousemove', (e) => {
 ### 3.5 Time-Sensitive Easter Eggs
 
 **Golden Hour (6-7 AM/PM):**
+
 - Warm golden overlay appears
 - Lighting shifts to sunset tones
 - "Golden Hour" badge
 - Special message about creativity
 
 **Midnight (12:00 AM):**
+
 - "Midnight Creator" message
 - Deeper color palette
 - Gentle stars in background
 - Cozy atmosphere
 
 **Implementation:**
+
 ```javascript
 function checkTimeBasedEggs() {
   const hour = new Date().getHours();
-  
+
   if (hour === 6 || hour === 18 || hour === 19) {
     activateGoldenHour();
   }
-  
+
   if (hour === 0) {
     activateMidnightMode();
   }
@@ -691,17 +755,20 @@ checkTimeBasedEggs(); // Initial check
 ```
 
 **Full Hour Marks:**
+
 - Soft chime sound (optional)
 - Time-related quote notification
 - Different quote each hour
 - Hand-drawn clock illustration
 
 **Quotes Examples:**
+
 - 1:00 - "One hour closer to something beautiful"
 - 3:00 - "The magic hour for deep work"
 - 9:00 - "Fresh starts and new ideas"
 
 **Acceptance Criteria:**
+
 - [ ] Time detection accurate
 - [ ] Effects appropriate to time
 - [ ] User timezone respected
@@ -710,28 +777,33 @@ checkTimeBasedEggs(); // Initial check
 ### 3.6 Reading Time Reward
 
 **Tracking:**
+
 - Monitor time on page
 - Slow scrolling bonus
 - Engagement score
 
 **Threshold:**
+
 - 5+ minutes on site
 - OR 3+ projects viewed
 - OR 2+ easter eggs found
 
 **Reward:**
+
 - "Thoughtful Visitor" badge
 - Unlocks extended content
 - Personal essay about your work
 - Newsletter invitation
 
 **Extended Content:**
+
 - Deeper reflections
 - Career advice
 - Creative process insights
 - Personal stories
 
 **Acceptance Criteria:**
+
 - [ ] Time tracking accurate
 - [ ] Doesn't track if tab inactive
 - [ ] Content worth the wait
@@ -740,16 +812,19 @@ checkTimeBasedEggs(); // Initial check
 ### 3.7 The Hidden Studio
 
 **Unlock Conditions:**
+
 - Find 5 achievements
 - OR type "studio"
 - OR complete color challenge
 
 **Reveal:**
+
 - New section appears in navigation
 - Smooth slide-in transition
 - "Studio" page accessible
 
 **Studio Content:**
+
 - Workspace photos
 - Tool preferences and setup
 - Creative process deep-dive
@@ -758,12 +833,14 @@ checkTimeBasedEggs(); // Initial check
 - Current projects or interests
 
 **Design:**
+
 - Scrapbook aesthetic
 - Polaroid-style photos
 - Handwritten captions
 - Casual, personal tone
 
 **Acceptance Criteria:**
+
 - [ ] Content personal but professional
 - [ ] High-quality photos
 - [ ] Navigation updated
@@ -776,6 +853,7 @@ checkTimeBasedEggs(); // Initial check
 ### 4.1 Dot Connection Game
 
 **Concept:**
+
 - Connect numbered dots
 - Reveals illustration
 - Relaxing, meditative
@@ -784,6 +862,7 @@ checkTimeBasedEggs(); // Initial check
 **Unlock:** Type "connect" or find 3 achievements
 
 **Implementation:**
+
 ```javascript
 const dots = [
   { id: 1, x: 100, y: 150 },
@@ -808,16 +887,19 @@ canvas.addEventListener('click', (e) => {
 ```
 
 **Illustration:**
+
 - Creative tools (pencil, mouse, coffee cup)
 - Hand-drawn aesthetic
 - Appears gradually as lines connect
 
 **Completion:**
+
 - Soft chime
 - "Pattern Finder" achievement
 - Option to save drawing
 
 **Acceptance Criteria:**
+
 - [ ] Dots numbered clearly
 - [ ] Lines drawn smoothly
 - [ ] Touch-friendly
@@ -826,12 +908,14 @@ canvas.addEventListener('click', (e) => {
 ### 4.2 Memory Pairs Game
 
 **Concept:**
+
 - Match pairs of project elements
 - Beautiful card designs
 - No timer
 - Reflective experience
 
 **Cards:**
+
 - Illustrations from projects
 - Icons from your work
 - Color swatches
@@ -839,11 +923,13 @@ canvas.addEventListener('click', (e) => {
 - 12-16 cards total
 
 **Card Design:**
+
 - Hand-illustrated backs
 - Soft flip animation (CSS 3D)
 - Matches reveal mini-stories
 
 **Implementation:**
+
 ```javascript
 const pairs = [
   { id: 'pair1', image: '/icon1.svg', story: 'This icon...' },
@@ -858,7 +944,7 @@ let flipped = [];
 function handleCardClick(card) {
   flipCard(card);
   flipped.push(card);
-  
+
   if (flipped.length === 2) {
     if (flipped[0].id === flipped[1].id) {
       // Match!
@@ -876,11 +962,13 @@ function handleCardClick(card) {
 ```
 
 **Completion:**
+
 - Unlocks project gallery mode
 - "Memory Keeper" achievement
 - All stories revealed
 
 **Acceptance Criteria:**
+
 - [ ] Cards flip smoothly
 - [ ] Match detection accurate
 - [ ] Stories meaningful
@@ -902,7 +990,7 @@ const achievements = [
     category: 'creative-soul',
     unlocked: false,
     unlockedAt: null,
-    hint: 'Sometimes the logo wants attention'
+    hint: 'Sometimes the logo wants attention',
   },
   {
     id: 'story-seeker',
@@ -912,18 +1000,18 @@ const achievements = [
     category: 'story-collector',
     unlocked: false,
     unlockedAt: null,
-    hint: 'Type something meaningful'
+    hint: 'Type something meaningful',
   },
   // ... 15-20 total achievements
 ];
 ```
 
 **Storage:**
+
 ```javascript
 // Save to localStorage
 function saveAchievements() {
-  localStorage.setItem('portfolio-achievements', 
-    JSON.stringify(achievements));
+  localStorage.setItem('portfolio-achievements', JSON.stringify(achievements));
 }
 
 // Load on init
@@ -938,6 +1026,7 @@ function loadAchievements() {
 ### 5.2 Achievement Notification System
 
 **Notification Design:**
+
 ```
 ┌─────────────────────────────┐
 │ ✨ Achievement Unlocked      │
@@ -950,6 +1039,7 @@ function loadAchievements() {
 ```
 
 **Animation:**
+
 - Slide in from bottom-left
 - Soft bounce on entry
 - Stay for 4 seconds
@@ -957,16 +1047,17 @@ function loadAchievements() {
 - Queue if multiple
 
 **Implementation:**
+
 ```javascript
 function showAchievement(achievement) {
   const notification = createNotificationElement(achievement);
   notification.classList.add('achievement-enter');
-  
+
   setTimeout(() => {
     notification.classList.remove('achievement-enter');
     notification.classList.add('achievement-visible');
   }, 50);
-  
+
   setTimeout(() => {
     notification.classList.add('achievement-exit');
     setTimeout(() => notification.remove(), 300);
@@ -975,12 +1066,14 @@ function showAchievement(achievement) {
 ```
 
 **Sound (Optional):**
+
 - Soft chime or bell
 - Very low volume
 - Can be muted
 - Saves preference
 
 **Acceptance Criteria:**
+
 - [ ] Notifications stack properly
 - [ ] Never overlap content
 - [ ] Dismissible by click
@@ -989,6 +1082,7 @@ function showAchievement(achievement) {
 ### 5.3 Achievement Progress Page
 
 **Layout:**
+
 ```
 ┌────────────────────────────────┐
 │  Your Journey                  │
@@ -1013,6 +1107,7 @@ function showAchievement(achievement) {
 ```
 
 **Features:**
+
 - Progress bars per category
 - Unlocked achievements highlighted
 - Locked achievements show hints
@@ -1020,12 +1115,14 @@ function showAchievement(achievement) {
 - Share progress option
 
 **Special Achievement:**
+
 - "Curator of Moments" for finding all
 - Beautiful certificate
 - Downloadable image
 - Personal thank you note
 
 **Acceptance Criteria:**
+
 - [ ] Progress accurate
 - [ ] Hints helpful not spoilers
 - [ ] Visual appeal maintained
@@ -1036,6 +1133,7 @@ function showAchievement(achievement) {
 ## 📱 Responsive & Accessibility
 
 ### Mobile Optimizations
+
 - [ ] Cards single column
 - [ ] Touch gestures for carousel
 - [ ] Larger tap targets
@@ -1043,12 +1141,14 @@ function showAchievement(achievement) {
 - [ ] Easter eggs adapted
 
 ### Keyboard Navigation
+
 - [ ] Arrow keys in gallery
 - [ ] Tab through all cards
 - [ ] Modal trappable focus
 - [ ] Escape closes everything
 
 ### Screen Reader Support
+
 - [ ] All images have alt text
 - [ ] Achievement announcements
 - [ ] Modal properly labeled
@@ -1083,6 +1183,7 @@ function showAchievement(achievement) {
 8. Accessible throughout
 
 **Phase 3 Complete When:**
+
 - All checklist items done
 - No critical bugs
 - Content complete

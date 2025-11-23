@@ -1,20 +1,27 @@
 # Sophisticated Whimsical Portfolio with Hidden Easter Eggs - Complete Prompt
 
 ## 🎨 Core Design Philosophy
+
 Create an elevated, artful portfolio that balances sophistication with subtle playfulness. The design should feel like walking through a thoughtfully curated gallery where each interaction is intentional and rewarding. Think of it as "grown-up whimsy" - playful without being childish, experimental without being chaotic, warm without being saccharine.
 **Mood & Vibe:**
+
 - Calm and contemplative with moments of delight
 - Sophisticated but not pretentious
 - Warm and inviting but still professional
 - Artful and experimental with clear intention
 - Clean breathing room with purposeful details
-**Design Metaphor:**
-Imagine a beautifully designed coffee table book that occasionally surprises you - pages that unfold, hidden illustrations in margins, textures you want to touch. Digital tactility meets editorial sophistication.
+  **Design Metaphor:**
+  Imagine a beautifully designed coffee table book that occasionally surprises you - pages that unfold, hidden illustrations in margins, textures you want to touch. Digital tactility meets editorial sophistication.
+
 ---
+
 ## 🎨 Visual Design System
+
 ### Color Palette
+
 **Primary Colors:**
-```
+
+````
 Sage Green: #8B9D83 (main accent, buttons, highlights)
 Terracotta: #C67B5C (secondary accent, hover states)
 Warm Cream: #F5F1E8 (primary background)
@@ -93,7 +100,7 @@ Warm White: #FDFBF7 (cards, modals)
 Easter eggs should feel like rewards for attention, not gimmicks. They reveal themselves naturally to curious visitors. Think "delightful discovery" not "flashy surprise."
 ### 1. **Gentle Konami Code**
 **Trigger:** ↑ ↑ ↓ ↓ ← → ← → B A
-**Effect:** 
+**Effect:**
 - Screen doesn't flash - instead, a warm gradient wash transitions in
 - Background shifts to "Canvas Mode" - textured paper feel
 - Hidden sketchbook/journal section reveals itself
@@ -196,10 +203,10 @@ Easter eggs should feel like rewards for attention, not gimmicks. They reveal th
 - Tap and hold for mobile
 - Haptic feedback (gentle buzz)
 ### 8. **Color Harmony Challenge**
-**Setup:** 
+**Setup:**
 - 5 small color swatches hidden in design
 - Match your palette: sage, terracotta, cream, brown, gold
-**Trigger:** 
+**Trigger:**
 - Click them in order of warmth (cool to warm)
 - Or create a gradient by clicking adjacent colors
 - Custom theme builder unlocks
@@ -411,9 +418,9 @@ Easter eggs should feel like rewards for attention, not gimmicks. They reveal th
 - More like starting a conversation
 "Let's Create Something Together"
 [Large text area for message]
-"Tell me about your project, idea, 
+"Tell me about your project, idea,
 or just say hello..."
-[Email input] 
+[Email input]
 placeholder: "your@email.com"
 [Gentle button]
 "Send Message ✉️"
@@ -633,7 +640,7 @@ or
 - Lazy load below fold
 **Responsive Images:**
 ```html
-<img 
+<img
   srcset="image-480.webp 480w,
           image-800.webp 800w,
           image-1200.webp 1200w"
@@ -812,3 +819,4 @@ This portfolio should feel like a well-designed book that rewards slow reading. 
 The easter eggs aren't tricks—they're thank-yous to visitors who take the time to really look. The design should make people feel calm, inspired, and a little bit delighted. Professional enough to trust with serious work, personal enough to want to work with.
 Most importantly: it should feel authentically YOU. Every choice reflects your values: thoughtfulness, craft, warmth, and the belief that good work comes from taking time to do things right.
 **Remember:** Sophistication isn't about being fancy—it's about being intentional. Whimsy isn't about being silly—it's about finding joy in details. Together, they create something memorable and meaningful. ✨
+````
