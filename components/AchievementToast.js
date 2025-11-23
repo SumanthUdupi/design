@@ -1,4 +1,5 @@
 'use client';
+import PropTypes from 'prop-types';
 import { useEffect } from 'react';
 
 export default function AchievementToast({ achievement, onDone }) {
@@ -30,3 +31,11 @@ export default function AchievementToast({ achievement, onDone }) {
     </div>
   );
 }
+
+AchievementToast.propTypes = {
+  achievement: PropTypes.shape({
+    name: PropTypes.string,
+    description: PropTypes.string,
+  }),
+  onDone: PropTypes.func,
+};

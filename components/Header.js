@@ -16,7 +16,9 @@ export default function Header() {
     if (next === 7) {
       try {
         unlock && unlock('patient-explorer');
-      } catch (e) {}
+      } catch (err) {
+        console.error('Failed to unlock achievement', err);
+      }
       setClicks(0);
     }
   };

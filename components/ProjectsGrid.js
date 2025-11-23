@@ -46,7 +46,9 @@ export default function ProjectsGrid() {
         } else {
           setSelected(null);
         }
-      } catch (e) {}
+      } catch (e) {
+        console.error('Failed to parse hash', e);
+      }
     }
 
     openFromHash();
@@ -114,7 +116,9 @@ export default function ProjectsGrid() {
                   proj.title,
                   `#projects/${proj.id}`
                 );
-              } catch (e) {}
+              } catch (e) {
+                // ignore history errors
+              }
             }}
           />
         ))}
@@ -126,7 +130,9 @@ export default function ProjectsGrid() {
           setSelected(null);
           try {
             window.history.pushState({}, '', '#projects');
-          } catch (e) {}
+          } catch (e) {
+            // ignore history errors
+          }
         }}
       />
     </section>
